@@ -1,3 +1,7 @@
+# ![Build](https://github.com/justjundana/jsonfmt/actions/workflows/test.yml/badge.svg)
+# ![Go Version](https://img.shields.io/badge/go-1.21-blue)
+# ![License](https://img.shields.io/badge/license-MIT-green)
+# ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 # jsonfmt
 
 A modern CLI tool for formatting and validating JSON files with robust error handling and 100% test coverage.
