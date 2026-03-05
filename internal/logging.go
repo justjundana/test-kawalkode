@@ -5,12 +5,16 @@ import (
 	"os"
 )
 
-// LogError prints an error message to stderr
+// LogError prints an error message to stderr.
+// Warning: format should be a constant string; user input should be passed via args to avoid format injection.
 func LogError(format string, args ...interface{}) {
-	fmt.Fprintf(os.Stderr, "[ERROR] "+format+"\n", args...)
+	msg := fmt.Sprintf(format, args...)
+	fmt.Fprintf(os.Stderr, "[ERROR] %s\n", msg)
 }
 
-// LogInfo prints an info message to stdout
+// LogInfo prints an info message to stdout.
+// Warning: format should be a constant string; user input should be passed via args to avoid format injection.
 func LogInfo(format string, args ...interface{}) {
-	fmt.Printf("[INFO] "+format+"\n", args...)
+	msg := fmt.Sprintf(format, args...)
+	fmt.Fprintf(os.Stdout, "[INFO] %s\n", msg)
 }
