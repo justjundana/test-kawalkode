@@ -10,11 +10,27 @@ A modern CLI tool for formatting and validating JSON files with robust error han
 - Clear error messages on invalid or unreadable files
 - Fully tested, 100% code coverage
 
+
 ## Installation
+
+### With Go (recommended)
 
 ```sh
 go install github.com/justjundana/jsonfmt/cmd/jsonfmt@latest
 ```
+
+### From source
+
+Clone the repo and build:
+
+```sh
+git clone https://github.com/justjundana/jsonfmt.git
+cd jsonfmt/cmd/jsonfmt
+go build -o jsonfmt
+```
+
+### Requirements
+- Go 1.21 or newer
 
 ## Usage
 
