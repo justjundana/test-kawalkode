@@ -16,10 +16,57 @@ A modern CLI tool for formatting and validating JSON files with robust error han
 go install github.com/justjundana/jsonfmt/cmd/jsonfmt@latest
 ```
 
+
 ## Usage
 
 ```sh
-jsonfmt <file.json>
+jsonfmt [--minify] [--schema <schema.json>] [--stdout] [--diff] <file.json>
+```
+
+### Flags
+
+- `--minify`   Minify JSON (remove whitespace)
+- `--schema`   Validate JSON file against a JSON Schema
+- `--stdout`   Output to stdout instead of overwriting file
+- `--diff`     Show color diff between original and formatted/minified
+- `--help`     Show help message
+- `--version`  Show version info
+
+### Examples
+
+Format a file:
+```sh
+jsonfmt data.json
+```
+
+Minify a file:
+```sh
+jsonfmt --minify data.json
+```
+
+Validate with schema:
+```sh
+jsonfmt --schema schema.json data.json
+```
+
+Show diff only:
+```sh
+jsonfmt --diff data.json
+```
+
+Output to stdout:
+```sh
+jsonfmt --stdout data.json
+```
+
+Show help:
+```sh
+jsonfmt --help
+```
+
+Show version:
+```sh
+jsonfmt --version
 ```
 
 ### Current CLI Limitations
