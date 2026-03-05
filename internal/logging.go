@@ -6,15 +6,13 @@ import (
 )
 
 // LogError prints an error message to stderr.
-// Warning: format should be a constant string; user input should be passed via args to avoid format injection.
-func LogError(format string, args ...interface{}) {
-	msg := fmt.Sprintf(format, args...)
+// Accepts only pre-formatted messages to prevent format string injection.
+func LogError(msg string) {
 	fmt.Fprintf(os.Stderr, "[ERROR] %s\n", msg)
 }
 
 // LogInfo prints an info message to stdout.
-// Warning: format should be a constant string; user input should be passed via args to avoid format injection.
-func LogInfo(format string, args ...interface{}) {
-	msg := fmt.Sprintf(format, args...)
+// Accepts only pre-formatted messages to prevent format string injection.
+func LogInfo(msg string) {
 	fmt.Fprintf(os.Stdout, "[INFO] %s\n", msg)
 }
